@@ -1,8 +1,13 @@
 {
-  "functions": {
-    "index.php": { "runtime": "vercel-php@0.7.0" },
-    "admin/index.php": { "runtime": "vercel-php@0.7.0" },
-    "admin/files/*.php": { "runtime": "vercel-php@0.7.0" },
-    "files/*.php": { "runtime": "vercel-php@0.7.0" }
-  }
+  "version": 2,
+  "builds": [
+    { "src": "index.php", "use": "vercel-php@0.7.0" },
+    { "src": "admin/index.php", "use": "vercel-php@0.7.0" },
+    { "src": "admin/files/*.php", "use": "vercel-php@0.7.0" },
+    { "src": "files/*.php", "use": "vercel-php@0.7.0" },
+    { "src": "(css|images|vendor|fonts|admin/assets)/.**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
 }
