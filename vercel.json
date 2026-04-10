@@ -1,7 +1,7 @@
 {
   "functions": {
-    "*.php": { "runtime": "vercel-php@0.7.0" },
-    "admin/*.php": { "runtime": "vercel-php@0.7.0" },
+    "index.php": { "runtime": "vercel-php@0.7.0" },
+    "admin/index.php": { "runtime": "vercel-php@0.7.0" },
     "admin/files/*.php": { "runtime": "vercel-php@0.7.0" },
     "files/*.php": { "runtime": "vercel-php@0.7.0" }
   }
